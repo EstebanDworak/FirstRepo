@@ -1,0 +1,4 @@
+Conclusion:
+
+Este proyecto me ayudo a practicar el uso de apuntadores. Sobre todo los apuntadores a arreglos de estructuras.
+No tuve problemas para realizar el codigo. Me tomo un poco mas tiempo de lo que creia porque quería optimizar mucho el codigo.
