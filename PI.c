@@ -14,10 +14,9 @@
 #include <windows.h>
 
 
-#define THREADS 8
+#define THREADS 2
 long long mainCounter = 1;
-int i=0;
-long long precision = 5000000000;
+long long precision = 1000000;
 DWORD WINAPI calcular(double *suma);
 
 
@@ -35,7 +34,7 @@ void main() {
 
 	HANDLE hThreadArray[THREADS];
 
-	for(i=0;i<THREADS;i++){
+	for(int i=0;i<THREADS;i++){
 		 hThreadArray[i] = CreateThread(NULL, 0, (void *)calcular, &sum, 0, NULL);
 	}
 	//WaitForSingleObject(hThreadArray[0], INFINITE);
@@ -58,14 +57,11 @@ void main() {
 
 
 DWORD WINAPI calcular(double *suma){
-	long long n1= precision/THREADS*(long long)(i-1);
-	long long n2= precision/THREADS*(long long)i;
 
-	printf("\n%lli A %lli",n1,n2);
-
-	for(long long i =n1+1 ; i<n2;i+=2){
-		*suma+=(1.0)/(2*i-1);
-		*suma-=(1.0)/(2*(i+1)-1);
+	while(mainCounter<precision){
+		*suma+=(1.0)/(2*mainCounter-1);
+		*suma-=(1.0)/(2*(mainCounter+1)-1);
+		mainCounter+=2;
 	}
 
 }
