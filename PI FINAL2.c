@@ -4,7 +4,7 @@
 #include <time.h>
 
 
-#define MAX_THREADS 32
+#define MAX_THREADS 16
 
 typedef struct{
 	long long inicio;
@@ -23,7 +23,7 @@ int main(void) {
 	printf("Running...\n");
 	clock_t start = clock();
 
-	long long precision = 50000000000;
+	long long precision = 1000000000;
 	double sumaFinal = 0;
 	Thread threads[MAX_THREADS];
 
