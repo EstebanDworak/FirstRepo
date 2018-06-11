@@ -3,3 +3,4 @@
 
 <br /><br />
 - [x] Primer tarea
+- [x] Segunda tarea
