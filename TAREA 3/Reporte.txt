@@ -1,0 +1,9 @@
+Video con evidencia del trabajo: 
+  -https://youtu.be/GOr8aMmnki8
+
+Conclusiones:
+En este proyecto fue necesario utilizar mis conocimientos sobre manejo de archivos, bases de datos, estructuras y apuntadores, sin embargo, no creí necesario el uso de memoria dinámica. El reto más grande de esta tarea fue amaestrar el uso de archivos binarios y poder eliminar datos de ellos.
+
+Lo primero que realiza el programa es verificar si existe el archivo de configuración, si este no existe, creará uno y pedirá al usuario una ruta para guardar la base de datos. Después verificara si existen los archivos en dicha carpeta y si no existen los creara. Estos archivos de bases de datos llevan al principio el índice en el que está el último elemento añadido. De esta manera, al agregar más datos sabremos cual es el id a utilizar.
+
+Para agregar elementos a un archivo simplemente utilizamos en modo "a+b". Para borrar elementos copiamos a un archivo temporal los datos que no coinciden con la búsqueda, luego eliminamos el archivo original y renombramos y archivo temporal. El mismo procedimiento es usado para modificar algún valor de alguna estructura en el archivo.
